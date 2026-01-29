@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeddah Data Entry Services | Accurate, Secure, On-Time</title>
+
+    <style>
+      :root {
+        --primary: #0a3d2c;
+        --secondary: #f4c430;
+        --dark: #041511;
+        --light: #f9f9f9;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--dark);
+        color: var(--light);
+        line-height: 1.7;
+      }
+
+      /* ================= HEADER ================= */
+      header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: rgba(4, 21, 17, 0.95);
+        z-index: 1000;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: auto;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--secondary);
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--light);
+        font-size: 15px;
+      }
+
+      nav a:hover {
+        color: var(--secondary);
+      }
+
+      /* ================= HERO ================= */
+      .hero-section {
+        min-height: 100vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+          url("https://images.unsplash.com/photo-1460925895917-afdab827c52f");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        padding: 120px 20px 40px;
+        text-align: center;
+      }
+
+      .hero {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+        color: var(--secondary);
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        font-size: 20px;
+        color: #eeeeee;
+      }
+
+      .hero .subnote {
+        margin-top: 14px;
+        font-size: 15px;
+        color: #d7d7d7;
+        opacity: 0.95;
+      }
+
+      /* ================= SECTIONS ================= */
+      section {
+        padding: 100px 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 36px;
+        color: var(--secondary);
+      }
+
+      .section-title p {
+        max-width: 800px;
+        margin: 10px auto 0;
+        color: #dddddd;
+      }
+
+      /* ================= CARDS / GRIDS ================= */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background-color: rgba(10, 61, 44, 0.95);
+        padding: 30px;
+        border-radius: 10px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .card h3 {
+        color: var(--secondary);
+        margin-bottom: 12px;
+      }
+
+      .card ul {
+        margin-top: 12px;
+        padding-left: 18px;
+        color: #e6e6e6;
+      }
+
+      .badge {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(244, 196, 48, 0.15);
+        color: var(--secondary);
+        font-size: 12px;
+        border: 1px solid rgba(244, 196, 48, 0.35);
+      }
+
+      /* ================= BACKGROUNDS ================= */
+      .alt-bg {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+          url("https://images.unsplash.com/photo-1551288049-bebda4e38f71");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .plain-bg {
+        background-color: #02110d;
+      }
+
+      /* ================= POLICY ================= */
+      .policy-box {
+        background-color: rgba(12, 75, 54, 0.95);
+        border-radius: 12px;
+        padding: 40px;
+        font-size: 16px;
+      }
+
+      .policy-box h3 {
+        color: var(--secondary);
+        margin: 18px 0 8px;
+        font-size: 20px;
+      }
+
+      .policy-box p,
+      .policy-box li {
+        color: #e8e8e8;
+      }
+
+      .policy-box ul {
+        margin: 10px 0 0 18px;
+      }
+
+      .small {
+        font-size: 14px;
+        color: #d5d5d5;
+      }
+
+      /* ================= CONTACT ================= */
+      .contact-box {
+        background-color: rgba(10, 61, 44, 0.95);
+        border-radius: 12px;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .contact-item {
+        margin-bottom: 18px;
+        font-size: 18px;
+      }
+
+      .contact-item strong {
+        color: var(--secondary);
+      }
+
+      /* ================= FOOTER ================= */
+      footer {
+        background-color: #020d0a;
+        padding: 30px 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #cccccc;
+      }
+
+      .footer-links {
+        margin-top: 10px;
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: #cccccc;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--secondary);
+      }
+
+      /* ================= MOBILE ================= */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 38px;
+        }
+        .hero p {
+          font-size: 18px;
+        }
+        .policy-box,
+        .contact-box {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">Jeddah Data Entry</div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Cricket Nets</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#policies">Policies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="home" class="hero-section">
+      <div class="hero">
+        <h1>Jeddah Data Entry Services</h1>
+        <p>
+          Accurate, secure, and on-time data entry for businesses, teams, and
+          individuals in Saudi Arabia.
+        </p>
+        <p class="subnote">
+          Note: We provide
+          <strong>data entry for cricket software</strong> (scorecards, stats,
+          databases). We do not provide sports ground or cricket playing
+          services.
+        </p>
+      </div>
+    </div>
+
+    <section id="services" class="alt-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>
+            General data entry solutions plus specialized cricket software data
+            entry, with accuracy and confidentiality.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h3>General Data Entry</h3>
+            <p>
+              Clean and structured data entry into spreadsheets, CRMs, portals,
+              and internal systems.
+            </p>
+            <ul>
+              <li>Excel / Google Sheets data entry</li>
+              <li>Online forms and portals</li>
+              <li>Data cleaning and formatting</li>
+              <li>Bulk copy-paste and validation</li>
+            </ul>
+            <span class="badge">Most requested</span>
+          </div>
+
+          <div class="card">
+            <h3>Document Typing and Conversion</h3>
+            <p>Convert and organize documents into editable formats.</p>
+            <ul>
+              <li>PDF to Word / Excel</li>
+              <li>Image to text (manual typing)</li>
+              <li>Formatting and templates</li>
+              <li>File naming and structuring</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Data Research and Collection</h3>
+            <p>Online research and compiling data based on your criteria.</p>
+            <ul>
+              <li>Company/contact lists</li>
+              <li>Product catalog data</li>
+              <li>Verification and cross-checking</li>
+              <li>Structured reporting</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Cricket Software Data Entry</h3>
+            <p>
+              Data entry for cricket systems, apps, and databases (not cricket
+              ground activities).
+            </p>
+            <ul>
+              <li>Scorecards and match records</li>
+              <li>Ball-by-ball data entry</li>
+              <li>Player and team statistics</li>
+              <li>Tournament tables and reports</li>
+            </ul>
+            <span class="badge">Sports software only</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="plain-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pricing</h2>
+          <p>
+            Transparent packages. Final quotes depend on complexity, source
+            format, and turnaround time.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Starter</h3>
+            <p>Best for small tasks and quick formatting.</p>
+            <ul>
+              <li>Up to 1,000 rows or equivalent</li>
+              <li>Basic cleaning and formatting</li>
+              <li>Delivery: 2 to 3 business days</li>
+            </ul>
+            <p><strong>From 150 SAR</strong></p>
+          </div>
+
+          <div class="card">
+            <h3>Business</h3>
+            <p>For regular work and medium-sized datasets.</p>
+            <ul>
+              <li>Up to 5,000 rows or equivalent</li>
+              <li>Validation rules (basic)</li>
+              <li>Delivery: 2 business days</li>
+            </ul>
+            <p><strong>From 450 SAR</strong></p>
+            <span class="badge">Popular</span>
+          </div>
+
+          <div class="card">
+            <h3>Enterprise</h3>
+            <p>Large-volume or ongoing data operations.</p>
+            <ul>
+              <li>10,000+ rows or ongoing monthly support</li>
+              <li>Custom workflow and reporting</li>
+              <li>Priority turnaround</li>
+            </ul>
+            <p><strong>Custom quote</strong></p>
+          </div>
+
+          <div class="card">
+            <h3>Cricket Software Package</h3>
+            <p>For match/tournament data entry projects.</p>
+            <ul>
+              <li>Match records, scorecards, stats</li>
+              <li>Consistency checks for player/team names</li>
+              <li>Delivery based on match count</li>
+            </ul>
+            <p><strong>From 250 SAR</strong></p>
+            <span class="badge">Specialized</span>
+          </div>
+        </div>
+
+        <p class="small" style="text-align: center; margin-top: 18px">
+          Currency: All prices are shown in Saudi Riyals (SAR). If you pay in
+          another currency, your bank/payment provider may apply an exchange
+          rate and fees.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="alt-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>
+            Reliable data entry services with strong attention to accuracy,
+            privacy, and delivery timelines.
+          </p>
+        </div>
+
+        <div class="policy-box">
+          <p>
+            Jeddah Data Entry provides general data entry and freelance data
+            services for organizations and individuals. We help clients convert,
+            clean, organize, and maintain accurate records across spreadsheets,
+            websites, and business tools.
+          </p>
+          <p style="margin-top: 12px">
+            We also support <strong>cricket software data entry</strong> for
+            scorecards, statistics, and tournament databases. This is a data
+            processing service related to software and reporting, not a sports
+            facility or cricket playing service.
+          </p>
+
+          <h3>Licensing and Compliance</h3>
+          <p>
+            Where required by local regulations, we operate under appropriate
+            freelance certification and/or business licensing. Clients may
+            request proof of registration or certification as applicable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="policies" class="plain-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Policies</h2>
+          <p>
+            Updated Terms of Service, Refund Policy, and Privacy Policy for data
+            entry services.
+          </p>
+        </div>
+
+        <div class="policy-box">
+          <p class="small"><strong>Last Updated:</strong> January 29, 2026</p>
+
+          <h3>1. Terms of Service</h3>
+          <p>
+            These Terms of Service ("Terms") govern your use of our website and
+            the purchase/use of our data entry services ("Services"). By
+            contacting us, requesting a quote, placing an order, or using our
+            Services, you agree to these Terms.
+          </p>
+
+          <h3>2. Services Scope</h3>
+          <ul>
+            <li>
+              <strong>General Data Entry:</strong> Data entry, cleaning,
+              formatting, and organization services.
+            </li>
+            <li>
+              <strong>Cricket Software Data Entry:</strong> Scorecards, match
+              stats, player/team databases, and tournament records for
+              software/reporting use.
+            </li>
+            <li>
+              <strong>Not a Sports Facility:</strong> We do not offer cricket
+              nets booking, ground rental, coaching, or sports gameplay
+              services.
+            </li>
+          </ul>
+
+          <h3>3. Orders, Requirements, and Client Responsibilities</h3>
+          <ul>
+            <li>
+              You must provide clear instructions, source files/links, and
+              required output format before work begins.
+            </li>
+            <li>
+              You confirm you have rights/permission to share any data and that
+              it does not violate laws or third-party rights.
+            </li>
+            <li>
+              Client delays in providing inputs may impact delivery timelines.
+            </li>
+          </ul>
+
+          <h3>4. Pricing, Currency, and Exchange</h3>
+          <ul>
+            <li>
+              Prices are shown in <strong>SAR</strong> unless stated otherwise.
+            </li>
+            <li>
+              Quotes may be fixed-price or hourly depending on task scope.
+            </li>
+            <li>
+              If you pay using a different currency, your bank/payment provider
+              may apply exchange rates and transaction fees. We are not
+              responsible for those fees.
+            </li>
+            <li>
+              Urgent/priority delivery may carry additional charges (shared
+              before confirmation).
+            </li>
+          </ul>
+
+          <h3>5. Payments</h3>
+          <ul>
+            <li>
+              Work typically starts after payment confirmation (full or
+              milestone-based depending on the project).
+            </li>
+            <li>
+              For large projects, we may require an advance deposit and
+              remaining amount upon delivery.
+            </li>
+            <li>
+              Any third-party payment processing fees may be borne by the client
+              unless agreed otherwise.
+            </li>
+          </ul>
+
+          <h3>6. Delivery and Revisions</h3>
+          <ul>
+            <li>
+              Delivery timelines depend on complexity and client responsiveness.
+            </li>
+            <li>
+              We offer reasonable revisions for errors that do not match the
+              agreed instructions (see Refund Policy for details).
+            </li>
+            <li>
+              Changes to scope after approval may require a revised quote.
+            </li>
+          </ul>
+
+          <h3>7. Confidentiality</h3>
+          <p>
+            We treat client data as confidential and use it only to deliver the
+            Services. We do not sell client data. Clients should avoid sending
+            sensitive data unless necessary for the task.
+          </p>
+
+          <h3>8. Limitation of Liability</h3>
+          <p>
+            To the maximum extent permitted by law, we are not liable for
+            indirect, incidental, or consequential losses. Our total liability
+            for any claim related to the Services will not exceed the amount
+            paid for the specific order.
+          </p>
+
+          <h3>9. Modifications</h3>
+          <p>
+            We may update these Terms from time to time. Updates take effect
+            when posted on this page.
+          </p>
+
+          <h3>10. Contact</h3>
+          <p class="small">
+            Email: contact@jeddahdataentry.com<br />
+            Phone: +966 56 681 9266 | +966 56 451 7456<br />
+            Address: Jeddah, Saudi Arabia
+          </p>
+
+          <hr
+            style="
+              margin: 24px 0;
+              border: 0;
+              border-top: 1px solid rgba(255, 255, 255, 0.12);
+            "
+          />
+
+          <h3>2. Refund & Cancellation Policy</h3>
+          <p>
+            This Refund Policy applies to data entry and digital service orders
+            (not facility bookings). Because our Services involve time, labor,
+            and digital delivery, refunds are limited as described below.
+          </p>
+
+          <h3>1. Eligibility</h3>
+          <ul>
+            <li>
+              <strong>Before Work Starts:</strong> If you cancel before we
+              start, you may receive a full refund (minus payment processing
+              fees, if any).
+            </li>
+            <li>
+              <strong>After Work Starts:</strong> If work has started, refunds
+              (if any) are prorated based on completed work and time spent.
+            </li>
+            <li>
+              <strong>After Delivery:</strong> Refunds are generally not
+              provided after final delivery, except for verified non-compliance
+              with agreed instructions.
+            </li>
+          </ul>
+
+          <h3>2. Revisions Instead of Refund</h3>
+          <ul>
+            <li>
+              If there is an error that does not match agreed instructions, we
+              will fix it at no extra cost within a reasonable revision window.
+            </li>
+            <li>
+              Refunds are considered only if we cannot correct the issue within
+              a reasonable time.
+            </li>
+          </ul>
+
+          <h3>3. Non-Refundable Cases</h3>
+          <ul>
+            <li>Change of mind after work has started.</li>
+            <li>Scope changes not included in the original instructions.</li>
+            <li>Delays caused by missing/incorrect client inputs.</li>
+            <li>Third-party tool/platform limitations outside our control.</li>
+          </ul>
+
+          <h3>4. Exchange Rate and Fees</h3>
+          <ul>
+            <li>
+              Refunds are processed in the original payment method where
+              possible.
+            </li>
+            <li>
+              Exchange rate differences, bank charges, and gateway fees are not
+              refundable if imposed by third parties.
+            </li>
+          </ul>
+
+          <h3>5. How to Request a Refund</h3>
+          <p class="small">
+            Email us with your order details, description of the issue, and
+            supporting screenshots/files: contact@jeddahdataentry.com
+          </p>
+
+          <hr
+            style="
+              margin: 24px 0;
+              border: 0;
+              border-top: 1px solid rgba(255, 255, 255, 0.12);
+            "
+          />
+
+          <h3>3. Privacy Policy</h3>
+          <p>
+            This Privacy Policy explains how we collect, use, and protect
+            personal information when you use our website or Services.
+          </p>
+
+          <h3>1. Information We Collect</h3>
+          <ul>
+            <li>
+              <strong>Information you provide:</strong> Name, email, phone,
+              project requirements, files you share for processing.
+            </li>
+            <li>
+              <strong>Technical data:</strong> IP address, browser/device type,
+              pages visited (for security and analytics).
+            </li>
+            <li>
+              <strong>Payment data:</strong> Processed by payment providers; we
+              do not store full card details on our servers.
+            </li>
+          </ul>
+
+          <h3>2. How We Use Information</h3>
+          <ul>
+            <li>To deliver and support Services</li>
+            <li>To communicate about quotes, orders, and updates</li>
+            <li>To improve website performance and security</li>
+            <li>To comply with legal obligations where applicable</li>
+          </ul>
+
+          <h3>3. Sharing</h3>
+          <ul>
+            <li>We do not sell your personal information.</li>
+            <li>
+              We may share data with service providers (hosting, email,
+              analytics) only as needed to operate the business.
+            </li>
+            <li>We may disclose information if required by law.</li>
+          </ul>
+
+          <h3>4. Data Security</h3>
+          <p>
+            We implement reasonable technical and organizational measures to
+            protect your data. However, no online system is 100% secure.
+          </p>
+
+          <h3>5. Data Retention</h3>
+          <p>
+            We retain client data only as long as needed to deliver Services,
+            resolve disputes, and meet legal/accounting needs. Clients can
+            request deletion where legally permitted.
+          </p>
+
+          <h3>6. Your Rights</h3>
+          <p class="small">
+            You may request access, correction, or deletion of your personal
+            information by contacting us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="alt-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>
+            Share your files and requirements, and we will provide a quick quote
+            and timeline.
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-item">
+            <strong>Location</strong><br />
+            Jeddah, Saudi Arabia
+          </div>
+          <div class="contact-item">
+            <strong>Phone</strong><br />
+            +966 56 681 9266<br />
+            +966 56 451 7456
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong><br />
+            contact@jeddahdataentry.com
+          </div>
+          <p class="small">
+            If your request involves cricket, please note: this is for cricket
+            <strong>software data</strong> entry only.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Jeddah Data Entry Services</p>
+      <p>
+        General Data Entry | Document Conversion | Data Research | Cricket
+        Software Data Entry
+      </p>
+
+      <div class="footer-links">
+        <a href="#policies">Terms</a>
+        <a href="#policies">Refund Policy</a>
+        <a href="#policies">Privacy Policy</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>

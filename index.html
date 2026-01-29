@@ -1,329 +1,331 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeddah Cricket Nets | Cricket Data Entry Services</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeddah Cricket Nets | Cricket Data Entry Services</title>
 
-<style>
-:root {
-    --primary: #0a3d2c;
-    --secondary: #f4c430;
-    --dark: #041511;
-    --light: #f9f9f9;
-}
+    <style>
+      :root {
+        --primary: #0a3d2c;
+        --secondary: #f4c430;
+        --dark: #041511;
+        --light: #f9f9f9;
+      }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
 
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--dark);
-    color: var(--light);
-    line-height: 1.7;
-}
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--dark);
+        color: var(--light);
+        line-height: 1.7;
+      }
 
-/* ================= HEADER ================= */
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: rgba(4, 21, 17, 0.95);
-    z-index: 1000;
-}
+      /* ================= HEADER ================= */
+      header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: rgba(4, 21, 17, 0.95);
+        z-index: 1000;
+      }
 
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+      .navbar {
+        max-width: 1200px;
+        margin: auto;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--secondary);
-}
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--secondary);
+      }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
 
-nav a {
-    text-decoration: none;
-    color: var(--light);
-    font-size: 16px;
-}
+      nav a {
+        text-decoration: none;
+        color: var(--light);
+        font-size: 16px;
+      }
 
-nav a:hover {
-    color: var(--secondary);
-}
+      nav a:hover {
+        color: var(--secondary);
+      }
 
-/* ================= HERO ================= */
-.hero-section {
-    min-height: 100vh;
-    background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-        url("https://images.unsplash.com/photo-1551288049-bebda4e38f71");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 120px 20px 40px;
-    text-align: center;
-}
+      /* ================= HERO ================= */
+      .hero-section {
+        min-height: 100vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+          url("https://images.unsplash.com/photo-1551288049-bebda4e38f71");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        padding: 120px 20px 40px;
+        text-align: center;
+      }
 
-.hero {
-    max-width: 900px;
-    margin: auto;
-}
+      .hero {
+        max-width: 900px;
+        margin: auto;
+      }
 
-.hero h1 {
-    font-size: 52px;
-    color: var(--secondary);
-    margin-bottom: 15px;
-}
+      .hero h1 {
+        font-size: 52px;
+        color: var(--secondary);
+        margin-bottom: 15px;
+      }
 
-.hero p {
-    font-size: 20px;
-}
+      .hero p {
+        font-size: 20px;
+      }
 
-/* ================= SECTIONS ================= */
-section {
-    padding: 100px 20px;
-}
+      /* ================= SECTIONS ================= */
+      section {
+        padding: 100px 20px;
+      }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
 
-.section-title h2 {
-    font-size: 36px;
-    color: var(--secondary);
-}
+      .section-title h2 {
+        font-size: 36px;
+        color: var(--secondary);
+      }
 
-.section-title p {
-    max-width: 700px;
-    margin: 10px auto 0;
-    color: #dddddd;
-}
+      .section-title p {
+        max-width: 700px;
+        margin: 10px auto 0;
+        color: #dddddd;
+      }
 
-/* ================= SERVICES ================= */
-.services-section {
-    background:
-        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-        url("https://images.unsplash.com/photo-1460925895917-afdab827c52f");
-    background-size: cover;
-    background-position: center;
-}
+      /* ================= SERVICES ================= */
+      .services-section {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+          url("https://images.unsplash.com/photo-1460925895917-afdab827c52f");
+        background-size: cover;
+        background-position: center;
+      }
 
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
 
-.service-card {
-    background-color: rgba(10, 61, 44, 0.95);
-    padding: 30px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-}
-
-.service-card h3 {
-    color: var(--secondary);
-    margin-bottom: 12px;
-}
-
-/* ================= ABOUT ================= */
-.about-section {
-    background:
-        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-        url("https://images.unsplash.com/photo-1593766788306-28561086694c");
-    background-size: cover;
-    background-position: center;
-}
-
-.about-box {
-    background-color: rgba(12, 75, 54, 0.95);
-    border-radius: 12px;
-    padding: 50px;
-    font-size: 18px;
-}
-
-/* ================= CONTACT ================= */
-.contact-section {
-    background:
-        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-        url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d");
-    background-size: cover;
-    background-position: center;
-}
-
-.contact-box {
-    background-color: rgba(10, 61, 44, 0.95);
-    border-radius: 12px;
-    padding: 50px;
-    text-align: center;
-}
-
-.contact-item {
-    margin-bottom: 18px;
-    font-size: 18px;
-}
-
-.contact-item strong {
-    color: var(--secondary);
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background-color: #020d0a;
-    padding: 30px 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #cccccc;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 38px;
-    }
-    .hero p {
-        font-size: 18px;
-    }
-    .about-box, .contact-box {
+      .service-card {
+        background-color: rgba(10, 61, 44, 0.95);
         padding: 30px;
-    }
-}
-</style>
-</head>
+        border-radius: 10px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
 
-<body>
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      }
 
-<header>
-    <div class="navbar">
+      .service-card h3 {
+        color: var(--secondary);
+        margin-bottom: 12px;
+      }
+
+      /* ================= ABOUT ================= */
+      .about-section {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+          url("https://images.unsplash.com/photo-1593766788306-28561086694c");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .about-box {
+        background-color: rgba(12, 75, 54, 0.95);
+        border-radius: 12px;
+        padding: 50px;
+        font-size: 18px;
+      }
+
+      /* ================= CONTACT ================= */
+      .contact-section {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+          url("https://images.unsplash.com/photo-1521412644187-c49fa049e84d");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .contact-box {
+        background-color: rgba(10, 61, 44, 0.95);
+        border-radius: 12px;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .contact-item {
+        margin-bottom: 18px;
+        font-size: 18px;
+      }
+
+      .contact-item strong {
+        color: var(--secondary);
+      }
+
+      /* ================= FOOTER ================= */
+      footer {
+        background-color: #020d0a;
+        padding: 30px 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #cccccc;
+      }
+
+      /* ================= MOBILE ================= */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 38px;
+        }
+        .hero p {
+          font-size: 18px;
+        }
+        .about-box,
+        .contact-box {
+          padding: 30px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
         <div class="logo">Jeddah Cricket Nets</div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="new-dataEntry.html">Data Entry Services</a></li>
+          </ul>
         </nav>
-    </div>
-</header>
+      </div>
+    </header>
 
-<div id="home" class="hero-section">
-    <div class="hero">
+    <div id="home" class="hero-section">
+      <div class="hero">
         <h1>Jeddah Cricket Nets</h1>
         <p>
-            Professional Cricket Data Entry and Freelance Data Services
-            in Jeddah, Saudi Arabia
+          Professional Cricket Data Entry and Freelance Data Services in Jeddah,
+          Saudi Arabia
         </p>
+      </div>
     </div>
-</div>
 
-<section id="services" class="services-section">
-    <div class="container">
+    <section id="services" class="services-section">
+      <div class="container">
         <div class="section-title">
-            <h2>Our Services</h2>
-            <p>Cricket-focused data solutions with accuracy and confidentiality</p>
+          <h2>Our Services</h2>
+          <p>
+            Cricket-focused data solutions with accuracy and confidentiality
+          </p>
         </div>
 
         <div class="services">
-            <div class="service-card">
-                <h3>Cricket Match Data Entry</h3>
-                <p>Ball-by-ball scoring, scorecards and tournament records.</p>
-            </div>
-            <div class="service-card">
-                <h3>Player & Team Statistics</h3>
-                <p>Player profiles, performance analysis and league tables.</p>
-            </div>
-            <div class="service-card">
-                <h3>Cricket Academy Records</h3>
-                <p>Attendance tracking, training logs and performance databases.</p>
-            </div>
-            <div class="service-card">
-                <h3>Freelance Data Entry</h3>
-                <p>High-volume data entry for spreadsheets and online systems.</p>
-            </div>
+          <div class="service-card">
+            <h3>Cricket Match Data Entry</h3>
+            <p>Ball-by-ball scoring, scorecards and tournament records.</p>
+          </div>
+          <div class="service-card">
+            <h3>Player & Team Statistics</h3>
+            <p>Player profiles, performance analysis and league tables.</p>
+          </div>
+          <div class="service-card">
+            <h3>Cricket Academy Records</h3>
+            <p>Attendance tracking, training logs and performance databases.</p>
+          </div>
+          <div class="service-card">
+            <h3>Freelance Data Entry</h3>
+            <p>High-volume data entry for spreadsheets and online systems.</p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="about" class="about-section">
-    <div class="container">
+    <section id="about" class="about-section">
+      <div class="container">
         <div class="section-title">
-            <h2>About Us</h2>
+          <h2>About Us</h2>
         </div>
 
         <div class="about-box">
-            <p>
-                Jeddah Cricket Nets is a specialized cricket data entry
-                and freelance data services provider based in Saudi Arabia.
-            </p>
-            <p>
-                We work with cricket academies, clubs, leagues and organizers
-                to maintain accurate and secure data records.
-            </p>
-            <p>
-                Our focus is reliability, confidentiality and timely delivery.
-            </p>
+          <p>
+            Jeddah Cricket Nets is a specialized cricket data entry and
+            freelance data services provider based in Saudi Arabia.
+          </p>
+          <p>
+            We work with cricket academies, clubs, leagues and organizers to
+            maintain accurate and secure data records.
+          </p>
+          <p>Our focus is reliability, confidentiality and timely delivery.</p>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="contact" class="contact-section">
-    <div class="container">
+    <section id="contact" class="contact-section">
+      <div class="container">
         <div class="section-title">
-            <h2>Contact Us</h2>
-            <p>Get in touch for professional cricket data entry services</p>
+          <h2>Contact Us</h2>
+          <p>Get in touch for professional cricket data entry services</p>
         </div>
 
         <div class="contact-box">
-            <div class="contact-item">
-                <strong>Address</strong><br>
-                H8F3+X9Q Ash Shorooq, Jeddah, Saudi Arabia
-            </div>
-            <div class="contact-item">
-                <strong>Phone</strong><br>
-                +966 56 681 9266<br>
-                +966 56 451 7456
-            </div>
-            <div class="contact-item">
-                <strong>Email</strong><br>
-                contact@jeddahcricketnets.com
-            </div>
+          <div class="contact-item">
+            <strong>Address</strong><br />
+            H8F3+X9Q Ash Shorooq, Jeddah, Saudi Arabia
+          </div>
+          <div class="contact-item">
+            <strong>Phone</strong><br />
+            +966 56 681 9266<br />
+            +966 56 451 7456
+          </div>
+          <div class="contact-item">
+            <strong>Email</strong><br />
+            contact@jeddahcricketnets.com
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer>
-    <p>© 2026 Jeddah Cricket Nets</p>
-    <p>Cricket Data Entry & Freelance Services | Saudi Arabia</p>
-</footer>
-
-</body>
+    <footer>
+      <p>© 2026 Jeddah Cricket Nets</p>
+      <p>Cricket Data Entry & Freelance Services | Saudi Arabia</p>
+    </footer>
+  </body>
 </html>
